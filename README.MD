@@ -10,10 +10,26 @@
 ## Setup
 
 1. `cd GMeet-Bot`
-2. Get the Course Names from your classroom  
+2. Enter your account credentials in `config.ini`</br>
+   Example:
+   >```
+    >[AUTH]
+    >USERNAME=username@abc.com
+    >PASSWORD=password
+   >```
+3. Download geckodriver from [here](https://github.com/mozilla/geckodriver/releases) and place it in the folder
+4.  Create a profile in Firefox and block the camera and microphone access for google meet.  
+   <img src="docs/images/Firefox_permissions.png" align="center" >
+   
+5. Get the path for the created profile using 
+   ```
+   about:profiles
+   ```
+   and include it [here]().
+6. Get the Course Names from your classroom  
    <img src="docs/images/CourseName.png" align="center">
 
-3. Insert the Course Name at the appropriate position in `schedule.csv`</br>
+7. Insert the Course Name at the appropriate position in `schedule.csv`</br>
    Example:
    > CS16004-SemC 
    > - Mon - 09:15
@@ -58,22 +74,6 @@
    </table>
     
 - Repeat this for all the Courses to populate the `schedule.csv` with your schedule
-4. Enter your account credentials in `config.ini`</br>
-   Example:
-   >```
-    >[AUTH]
-    >USERNAME=username@abc.com
-    >PASSWORD=password
-   >```
-5. Download geckodriver from [here](https://github.com/mozilla/geckodriver/releases) and place it in the folder
-6. Create a profile in Firefox and block the camera and microphone access for google meet.  
-   <img src="docs/images/Firefox_permissions.png" align="center" >
-   
-7. Get the path for the created profile using 
-   ```
-   about:profiles
-   ```
-   and include it [here]().
 
 ## Execution
 1. `cd GMeet-Bot`
@@ -105,3 +105,5 @@
 1. Google account must not be already logged in.
 2. `schedule.csv` must contain the exact course names.
 3. Slow internet connection may cause program to crash.
+
+# Leave a  if you find this useful.
