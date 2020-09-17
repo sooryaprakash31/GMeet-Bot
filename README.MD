@@ -8,9 +8,9 @@
 ## Setup
 
 1. `cd GMeet-Bot`
-2. Get the Course Names from your classroom 
-   </br>
-   ![Course Name](docs/images/CourseName.png)
+2. Get the Course Names from your classroom
+   <img src="docs/images/CourseName.png" align="center" height="150" width="450">
+
 3. Insert the Course Name at the appropriate position in `schedule.csv`</br>
    Example:
    > CS16004-SemC 
@@ -66,7 +66,8 @@
 5. Download geckodriver from [here](https://github.com/mozilla/geckodriver/releases) and place it in the folder
 6. Create a profile in Firefox and block the camera and microphone access for google meet.
    </br>
-   ![Firefox permissions](docs/images/Firefox_permissions.png)
+   <img src="docs/images/Firefox_permissions.png" aligh="center" height="200" width="390">
+   
 7. Get the path for the created profile using 
    ```
    about:profiles
