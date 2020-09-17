@@ -3,19 +3,21 @@
 ## Requirements
 
 - [python3](https://www.python.org/downloads/)
+- Clone of this repository
+- Firefox browser
 - `pip install requirements.txt`
 
 ## Setup
 
 1. `cd GMeet-Bot`
 2. Get the Course Names from your classroom  
-   <img src="docs/images/CourseName.png" align="center" height="150" width="450">
+   <img src="docs/images/CourseName.png" align="center">
 
 3. Insert the Course Name at the appropriate position in `schedule.csv`</br>
    Example:
    > CS16004-SemC 
    > - Mon - 09:15
-   > - Tue - 11:25 
+   > - Tue - 11:25
    > - Thu - 14:20
    ></br>
    ><table>
@@ -65,7 +67,7 @@
    >```
 5. Download geckodriver from [here](https://github.com/mozilla/geckodriver/releases) and place it in the folder
 6. Create a profile in Firefox and block the camera and microphone access for google meet.  
-   <img src="docs/images/Firefox_permissions.png" aligh="center" height="200" width="390">
+   <img src="docs/images/Firefox_permissions.png" align="center" >
    
 7. Get the path for the created profile using 
    ```
@@ -87,3 +89,19 @@
   3. Finds the Course from `schedule.csv`.
   4. Joins the meeting using the `Meet Link` in the course room.
   5. After one hour, ends the meeting and closes the browser.
+
+## Customization
+
+1. Class Timings
+   - Modify the class timings in [source code]() as well as `schedule.csv`
+   - Use 24-hour time format
+2. This program is set to run for three classes per day. Modify it here by changing 2 here to 'n'-1 for 'n' classes.
+   ```
+   if self.count < 2:
+        self.count = self.count + 1
+   ```
+
+## Troubleshooting
+1. Google account must not be already logged in.
+2. `schedule.csv` must contain the exact course names.
+3. Slow internet connection may cause program to crash.
