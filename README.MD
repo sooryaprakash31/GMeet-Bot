@@ -8,7 +8,8 @@
 ## Setup
 
 1. `cd GMeet-Bot`
-2. Get the Course Names from your classroom
+2. Get the Course Names from your classroom 
+   </br>
    ![Course Name](docs/images/CourseName.png)
 3. Insert the Course Name at the appropriate position in `schedule.csv`</br>
    Example:
@@ -16,6 +17,7 @@
    > - Mon - 09:15
    > - Tue - 11:25 
    > - Thu - 14:20
+   ></br>
    ><table>
    <th>Day</th>
     <th>09:15</th>
@@ -24,14 +26,20 @@
     <tr>
     <td>Mon</td>
     <td>CS16004-SemC</td>
+    <td></td>
+    <td></td>
     </tr>
     <tr>
     <td>Tue</td>
     <td></td>
     <td>CS16004-SemC</td>
+    <td></td>
     </tr>
     <tr>
     <td>Wed</td>
+    <td></td>
+    <td></td>
+    <td></td>
     </tr>
     <tr>
     <td>Thu</td>
@@ -41,19 +49,23 @@
     </tr>
     <tr>
     <td>Fri</td>
+    <td></td>
+    <td></td>
+    <td></td>
     </tr>
    </table>
     
 - Repeat this for all the Courses to populate the `schedule.csv` with your schedule
 4. Enter your account credentials in `config.ini`</br>
    Example:
-   ```
-    [AUTH]
-    USERNAME=username@abc.com
-    PASSWORD=password
-   ```
+   >```
+    >[AUTH]
+    >USERNAME=username@abc.com
+    >PASSWORD=password
+   >```
 5. Download geckodriver from [here](https://github.com/mozilla/geckodriver/releases) and place it in the folder
 6. Create a profile in Firefox and block the camera and microphone access for google meet.
+   </br>
    ![Firefox permissions](docs/images/Firefox_permissions.png)
 7. Get the path for the created profile using 
    ```
@@ -70,7 +82,7 @@
 
 - The program will run in the background until class time.
 - When the time hits one of the class timings, 
-  1. the program automatically fires up the browser.
+  1. The program automatically fires up the browser.
   2. Logs in your account into google classroom.
   3. Finds the Course from `schedule.csv`.
   4. Joins the meeting using the `Meet Link` in the course room.
