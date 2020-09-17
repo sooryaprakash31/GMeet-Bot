@@ -106,4 +106,4 @@
 2. `schedule.csv` must contain the exact course names.
 3. Slow internet connection may cause program to crash.
 
-# Leave a  if you find this useful.
+# Leave a :star: if you find this useful!

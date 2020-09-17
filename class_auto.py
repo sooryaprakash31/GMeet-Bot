@@ -12,15 +12,22 @@ password = config.get('AUTH', 'PASSWORD')
 
 classTime = ["09:15","11:35","14:20"]
 
-
 class ClassAutomation():
     def __init__(self):
         self.count = 0
+        self.findCount()
         schedule.every().day.at(classTime[self.count]).do(self.initClass)
         while True:
             schedule.run_pending()
             sleep(1)
 
+    def findCount(self):
+        currentTime=datetime.now().strftime("%H:%M")
+        currentHour = currentTime.split(":")[0]
+        for i in classTime:
+            if int(currentHour)<int(i.split(":")[0]):
+                self.count = classTime.index(i)
+            
     def initClass(self):
         self.login()
         className = self.findClass()
