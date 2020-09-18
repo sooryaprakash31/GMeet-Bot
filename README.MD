@@ -105,5 +105,5 @@
 1. Google account must not be already logged in.
 2. `schedule.csv` must contain the exact course names.
 3. Slow internet connection may cause program to crash.
-
+---
 # Leave a :star: if you find this useful!
