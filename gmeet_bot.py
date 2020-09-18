@@ -2,7 +2,6 @@ from selenium import webdriver
 from time import sleep
 from configparser import ConfigParser
 from datetime import datetime
-import schedule
 import csv
 
 config = ConfigParser()

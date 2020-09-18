@@ -1,9 +1,14 @@
-# GMeet-Bot
-- [Requirements](#requirements)
-- [Setup](#setup)
-- [Execution](#execution)
-- [Output](#output)
-- [Customization](#customization)
+<img src="docs/images/Gmeet_bot_header.png" align="center"><br>
+
+<center><p>I built this to make my life easier as a student. Hope this helps you too!<br>
+This bot joins your classes for you on time automatically using the data about your classroom schedule and account credentials.<br><a href="https://github.com/sooryaprakash31/GMeet-Bot">#AutomateAndChill</p></center>
+
+  - [Requirements](#requirements)
+  - [Setup](#setup)
+  - [Execution](#execution)
+  - [Output](#output)
+  - [Customization](#customization)
+  - [Troubleshooting](#troubleshooting)
 ## Requirements
 
 - Clone of this repository 
@@ -81,13 +86,14 @@
 
 ## Execution
 1. `cd GMeet-Bot`
-2. `python3 class_auto.py`
+2. `python3 gmeet_bot.py`
+3. `ctrl+c`  will stop the execution
 
 
 ## Output
 
-- The program will run in the background until class time.
-- When the time hits one of the class timings, 
+- The program will run in the background.
+- When the current time hits one of the class timings, 
   1. The program automatically fires up the browser.
   2. Logs in your account into google classroom.
   3. Finds the Course from `schedule.csv`.
@@ -97,9 +103,9 @@
 ## Customization
 
 1. Class Timings
-   - Modify the class timings in [source code](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L13) and in the header of `schedule.csv`
+   - Modify the class timings [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L13) in source code and in the header of `schedule.csv`
    - Use 24-hour time format
-2. This program is set to run for three classes per day. Modify it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L59) by changing 2 here to 'n'-1 for 'n' classes.
+2. It is programmed to run for three classes per day. Modify it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L59) by changing 2 to 'n'-1 for 'n' classes.
    ```
    if self.count < 2:
         self.count = self.count + 1
@@ -108,6 +114,6 @@
 ## Troubleshooting
 1. Google account must not be already logged in.
 2. `schedule.csv` must contain the exact course names.
-3. Slow internet connection may cause program to crash.
+3. Slow internet connection may cause program to crash. 
 ---
 # Leave a :star: if you find this useful!
