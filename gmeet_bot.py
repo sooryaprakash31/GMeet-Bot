@@ -9,38 +9,20 @@ config.read('config.ini')
 username = config.get('AUTH', 'USERNAME')
 password = config.get('AUTH', 'PASSWORD')
 
-classTime = ["09:20","11:40","19:25"]
+classTime = ["09:20","11:40","14:25"]
 
 class ClassAutomation():
     def __init__(self):
         self.count = 0
         self.findCount()
+        #Runs endlessly and calls initClass method when it's class time
         while True:
             if datetime.now().strftime("%H:%M") in classTime:
                 print(datetime.now().strftime("%H:%M"))
                 self.initClass()
             sleep(30)
-
-    def findCount(self):
-        currentTime=datetime.now().strftime("%H:%M")
-        currentHour = int(currentTime.split(":")[0])
-        currentMin = int(currentTime.split(":")[1])
-        for i in classTime:
-            if currentHour==int(i.split(":")[0]) and currentMin<int(i.split(":")[1]):
-                self.count = classTime.index(i)
-                print("Next Class at",classTime[self.count],"Today")
-                break
-            elif currentHour<int(i.split(":")[0]):
-                self.count = classTime.index(i)
-                print("Next Class at",classTime[self.count],"Today")
-                break
-            else:
-                if classTime.index(i)==2:
-                    self.count=0
-                    print("Next Class at",classTime[self.count],"Tomorrow")
-                    break
-                continue
-
+    
+    #Initiates Class
     def initClass(self):
         print("Initiating...")
         self.login()
@@ -61,6 +43,7 @@ class ClassAutomation():
             self.count = 0
         self.findCount()
 
+    #Returns the ClassName for the current time
     def findClass(self):
         with open("schedule.csv","r") as csvFile:
             reader = csv.DictReader(csvFile)
@@ -68,6 +51,28 @@ class ClassAutomation():
                 if row["Day"]== datetime.now().strftime("%a"):
                     return row[classTime[self.count]]
 
+    #Determines the current time position in the classTime list
+    def findCount(self):
+        currentTime=datetime.now().strftime("%H:%M")
+        currentHour = int(currentTime.split(":")[0])
+        currentMin = int(currentTime.split(":")[1])
+        for i in classTime:
+            if currentHour==int(i.split(":")[0]) and currentMin<int(i.split(":")[1]):
+                self.count = classTime.index(i)
+                print("Next Class at",classTime[self.count],"Today")
+                break
+            elif currentHour<int(i.split(":")[0]):
+                self.count = classTime.index(i)
+                print("Next Class at",classTime[self.count],"Today")
+                break
+            else:
+                if classTime.index(i)==2:
+                    self.count=0
+                    print("Next Class at",classTime[self.count],"Tomorrow")
+                    break
+                continue
+
+    #Logs into the google classroom with the account credentials
     def login(self):    
         profile = webdriver.FirefoxProfile('/home/soorya/.mozilla/firefox/2uxqa4qk.Class')
         self.driver = webdriver.Firefox(profile)
