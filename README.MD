@@ -1,10 +1,14 @@
 # GMeet-Bot
-
+- [Requirements](#requirements)
+- [Setup](#setup)
+- [Execution](#execution)
+- [Output](#output)
+- [Customization](#customization)
 ## Requirements
 
+- Clone of this repository 
 - [python3](https://www.python.org/downloads/)
-- Clone of this repository
-- Firefox browser
+- [Firefox browser](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release)
 - `pip install requirements.txt`
 
 ## Setup
@@ -25,7 +29,7 @@
    ```
    about:profiles
    ```
-   and include it [here]().
+   and include it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L73).
 6. Get the Course Names from your classroom  
    <img src="docs/images/CourseName.png" align="center">
 
@@ -93,9 +97,9 @@
 ## Customization
 
 1. Class Timings
-   - Modify the class timings in [source code]() as well as `schedule.csv`
+   - Modify the class timings in [source code](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L13) and in the header of `schedule.csv`
    - Use 24-hour time format
-2. This program is set to run for three classes per day. Modify it here by changing 2 here to 'n'-1 for 'n' classes.
+2. This program is set to run for three classes per day. Modify it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L59) by changing 2 here to 'n'-1 for 'n' classes.
    ```
    if self.count < 2:
         self.count = self.count + 1
