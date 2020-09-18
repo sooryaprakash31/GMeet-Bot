@@ -1,7 +1,7 @@
 <img src="docs/images/Gmeet_bot_header.png" align="center"><br>
 
-<center><p>I built this to make my life easier as a student. Hope this helps you too!<br>
-This bot joins your classes for you on time automatically using the data about your classroom schedule and account credentials.<br><a href="https://github.com/sooryaprakash31/GMeet-Bot">#AutomateAndChill</p></center>
+<p align="center">I built this to make my life easier as a student. Hope this helps you too!<br>
+This bot joins your classes for you on time automatically using the data about your classroom schedule and account credentials.<br><a href="https://github.com/sooryaprakash31/GMeet-Bot">#AutomateAndChill</p>
 
   - [Requirements](#requirements)
   - [Setup](#setup)
