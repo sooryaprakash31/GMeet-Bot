@@ -1,7 +1,7 @@
 <img src="docs/images/Gmeet_bot_header.png" align="center"><br>
 
 <p align="center">I built this to make my life easier as a student. Hope this helps you too!<br>
-This bot joins your classes for you on time automatically using the data about your classroom schedule and account credentials.<br><a href="https://github.com/sooryaprakash31/GMeet-Bot">#AutomateAndChill</p>
+This bot joins your classes for you on time automatically using the data about<br> your google classroom schedule and account credentials.<br><a href="https://github.com/sooryaprakash31/GMeet-Bot">#AutomateAndChill</p>
 
   - [Requirements](#requirements)
   - [Setup](#setup)
@@ -114,6 +114,9 @@ This bot joins your classes for you on time automatically using the data about y
 ## Troubleshooting
 1. Google account must not be already logged in.
 2. `schedule.csv` must contain the exact course names.
-3. Slow internet connection may cause program to crash. 
+3. Slow internet connection may cause program to crash.  
+<br>
+
 ---
-# Leave a :star: if you find this useful!
+
+## Leave a :star: if you find this useful!
