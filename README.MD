@@ -9,6 +9,8 @@ This bot joins your classes for you on time automatically using the data about<b
   - [Output](#output)
   - [Customization](#customization)
   - [Troubleshooting](#troubleshooting)
+  - [License](#license)
+
 ## Requirements
 
 - Clone of this repository 
@@ -115,7 +117,9 @@ This bot joins your classes for you on time automatically using the data about<b
 1. Google account must not be already logged in.
 2. `schedule.csv` must contain the exact course names.
 3. Slow internet connection may cause program to crash.  
-<br>
+
+## License
+- [MIT License](/LICENSE.MD)
 
 ---
 

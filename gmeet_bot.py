@@ -74,7 +74,7 @@ class ClassAutomation():
 
     #Logs into the google classroom with the account credentials
     def login(self):    
-        profile = webdriver.FirefoxProfile('/home/soorya/.mozilla/firefox/2uxqa4qk.Class')
+        profile = webdriver.FirefoxProfile('/path/to/the/created/profile')
         self.driver = webdriver.Firefox(profile)
         self.driver.get("https://accounts.google.com/")
         sleep(2)
