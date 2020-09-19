@@ -32,11 +32,12 @@ This bot joins your classes for you on time automatically using the data about<b
 4.  Create a profile in Firefox and block the camera and microphone access for google meet.  
    <img src="docs/images/Firefox_permissions.png" align="center" >
    
-5. Get the path for the created profile using 
+5. Get the path for the created profile using `about:profiles` in the firefox browser
+   and include it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L77).
    ```
-   about:profiles
+   def login(self):    
+        profile = webdriver.FirefoxProfile('/path/to/the/created/profile')
    ```
-   and include it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L73).
 6. Get the Course Names from your classroom  
    <img src="docs/images/CourseName.png" align="center">
 
@@ -105,9 +106,9 @@ This bot joins your classes for you on time automatically using the data about<b
 ## Customization
 
 1. Class Timings
-   - Modify the class timings [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L13) in source code and in the header of `schedule.csv`
+   - Modify the class timings [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L12) in source code and in the header of `schedule.csv`
    - Use 24-hour time format
-2. It is programmed to run for three classes per day. Modify it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/class_auto.py#L59) by changing 2 to 'n'-1 for 'n' classes.
+2. It is programmed to run for three classes per day. Modify it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L40) by changing 2 to 'n'-1 for 'n' classes.
    ```
    if self.count < 2:
         self.count = self.count + 1
