@@ -24,9 +24,11 @@ class ClassAutomation():
     
     #Initiates Class
     def initClass(self):
+        className = self.findClass()
+        if className is None:
+            return
         print("Initiating...")
         self.login()
-        className = self.findClass()
         self.driver.find_element_by_xpath("//div[text()='{}']".format(className)).click()
         sleep(10)
         link=self.driver.find_element_by_partial_link_text("https://meet.google.com/lookup/").text
@@ -48,11 +50,14 @@ class ClassAutomation():
         with open("schedule.csv","r") as csvFile:
             reader = csv.DictReader(csvFile)
             for row in reader:
-                if row["Day"]== datetime.now().strftime("%a"):
+                if row["Day"]==datetime.now().strftime("%a"):
                     return row[classTime[self.count]]
-
+            return None
     #Determines the current time position in the classTime list
     def findCount(self):
+        if self.findClass() is None:
+            print("No Class Today")
+            return
         currentTime=datetime.now().strftime("%H:%M")
         currentHour = int(currentTime.split(":")[0])
         currentMin = int(currentTime.split(":")[1])
