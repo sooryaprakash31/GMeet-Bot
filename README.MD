@@ -44,15 +44,15 @@ This bot joins your classes for you on time automatically using the data about<b
 7. Insert the Course Name at the appropriate position in `schedule.csv`</br>
    Example:
    > CS16004-SemC 
-   > - Mon - 09:15
-   > - Tue - 11:25
-   > - Thu - 14:20
+   > - Mon - 09:20
+   > - Tue - 11:40
+   > - Thu - 14:25
    ></br>
    ><table>
    <th>Day</th>
-    <th>09:15</th>
-    <th>11:25</th>
-    <th>14:20</th>
+    <th>09:20</th>
+    <th>11:40</th>
+    <th>14:25</th>
     <tr>
     <td>Mon</td>
     <td>CS16004-SemC</td>
