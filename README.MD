@@ -33,7 +33,7 @@ This bot joins your classes for you on time automatically using the data about<b
    <img src="docs/images/Firefox_permissions.png" align="center" >
    
 5. Get the path for the created profile using `about:profiles` in the firefox browser
-   and include it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L77).
+   and include it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L82).
    ```
    def login(self):    
         profile = webdriver.FirefoxProfile('/path/to/the/created/profile')
@@ -108,7 +108,7 @@ This bot joins your classes for you on time automatically using the data about<b
 1. Class Timings
    - Modify the class timings [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L12) in source code and in the header of `schedule.csv`
    - Use 24-hour time format
-2. It is programmed to run for three classes per day. Modify it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L40) by changing 2 to 'n'-1 for 'n' classes.
+2. It is programmed to run for three classes per day. Modify it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L42) by changing 2 to 'n'-1 for 'n' classes.
    ```
    if self.count < 2:
         self.count = self.count + 1
