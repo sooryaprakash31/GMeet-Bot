@@ -33,10 +33,10 @@ This bot joins your classes for you on time automatically using the data about<b
    <img src="docs/images/Firefox_permissions.png" align="center" >
    
 5. Get the path for the created profile using `about:profiles` in the firefox browser
-   and include it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L82).
+   and include the following at the end of the `config.ini` file.
    ```
-   def login(self):    
-        profile = webdriver.FirefoxProfile('/path/to/the/created/profile')
+   [FIREFOX]
+   PROFILE_PATH=/path/to/the/created/profile
    ```
 6. Get the Course Names from your classroom  
    <img src="docs/images/CourseName.png" align="center">

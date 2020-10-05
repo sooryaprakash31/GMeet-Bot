@@ -9,6 +9,8 @@ config.read('config.ini')
 username = config.get('AUTH', 'USERNAME')
 password = config.get('AUTH', 'PASSWORD')
 
+firefox_profile_path = config.get('FIREFOX', 'PROFILE_PATH')
+
 classTime = ["09:20","11:40","14:25"]
 
 class ClassAutomation():
@@ -79,7 +81,7 @@ class ClassAutomation():
 
     #Logs into the google classroom with the account credentials
     def login(self):    
-        profile = webdriver.FirefoxProfile('/path/to/the/created/profile')
+        profile = webdriver.FirefoxProfile(firefox_profile_path)
         self.driver = webdriver.Firefox(profile)
         self.driver.get("https://accounts.google.com/")
         sleep(2)
