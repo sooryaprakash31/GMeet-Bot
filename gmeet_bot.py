@@ -11,10 +11,11 @@ password = config.get('AUTH', 'PASSWORD')
 
 firefox_profile_path = config.get('FIREFOX', 'PROFILE_PATH')
 
-classTime = ["09:20","11:40","14:25"]
+classTime = []
 
 class ClassAutomation():
     def __init__(self):
+        self.getClasstime()
         self.count = 0
         self.findCount()
         #Runs endlessly and calls initClass method when it's class time
@@ -24,6 +25,16 @@ class ClassAutomation():
                 self.initClass()
             sleep(30)
     
+    #Reads class timings from the schedule.csv
+    def getClasstime(self):
+        with open('schedule.csv','r') as csvFile:
+            reader = csv.DictReader(csvFile)
+            for row in reader:
+                for i in row:
+                    classTime.append(i)
+                classTime.pop(0)
+                break
+
     #Initiates Class
     def initClass(self):
         className = self.findClass()
