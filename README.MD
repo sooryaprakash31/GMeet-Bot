@@ -108,7 +108,7 @@ This bot joins your classes for you on time automatically using the data about<b
 1. Class Timings
    - Modify the class timings in the header of `schedule.csv`
    - Use 24-hour time format
-2. It is programmed to run for three classes per day. Modify it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L42) by changing 2 to 'n'-1 for 'n' classes.
+2. It is programmed to run for three classes per day. Modify it [here](https://github.com/sooryaprakash31/GMeet-Bot/blob/master/gmeet_bot.py#L55) by changing 2 to 'n'-1 for 'n' classes.
    ```
    if self.count < 2:
         self.count = self.count + 1
